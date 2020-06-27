@@ -1,0 +1,11 @@
+{
+  "name": "sanitize-functions",
+  "version": "0.1",
+  "description": "",
+  "main": "sanitize.js",
+  "author": "Ailton Loures <ailton.loures99@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
