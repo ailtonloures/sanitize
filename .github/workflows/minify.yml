@@ -26,7 +26,7 @@ jobs:
 
     - name: Checkout to gh-pages, merge and push
       run: |
-        git checkout gh-pages
+        git checkout remote/gh-pages
         git merge master
         git push
         
