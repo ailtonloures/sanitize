@@ -23,10 +23,11 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
 
-    - name: Checkout to gh-pages, merge and push
+    - name: merge and push
       run: |
-        git checkout remote/gh-pages
         git merge master
         git push
         
