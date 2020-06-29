@@ -24,13 +24,10 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Checkout to gh-pages
+    - name: Checkout to gh-pages, merge and push
       run: |
-        git pull origin master --allow-unrelated-histories
         git checkout gh-pages
-
-    - name: Merge and Push
-      run: |
         git merge master
         git push
+        
    
