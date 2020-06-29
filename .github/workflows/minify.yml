@@ -36,7 +36,9 @@ jobs:
         git checkout gh-pages
 
     - name: Run gulp minify
-      run: gulp minify
+      run: |
+        npm install gulp-cli
+        gulp minify
 
     - name: Merge and Push
       run: |
