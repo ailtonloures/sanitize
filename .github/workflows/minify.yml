@@ -23,13 +23,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    
-    - name: Install dependencies
-      run: npm install
-     
+
     - name: Checkout to gh-pages
       run: |
-        git pull
+        git pull origin master --allow-unrelated-histories
         git checkout gh-pages
 
     - name: Merge and Push
