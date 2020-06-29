@@ -31,7 +31,9 @@ jobs:
       run: npm install
      
     - name: Checkout to gh-pages
-      run: git checkout gh-pages
+      run: |
+        git pull
+        git checkout gh-pages
 
     - name: Run gulp minify
       run: gulp minify
