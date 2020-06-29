@@ -24,8 +24,8 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Install gulp
-      run: sudo npm install --global gulp-cli
+    # - name: Install gulp
+    #   run: sudo npm install --global gulp-cli
     
     - name: Install dependencies
       run: npm install
