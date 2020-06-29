@@ -37,7 +37,7 @@ jobs:
 
     - name: Run gulp minify
       run: |
-        npm install gulp-cli
+        sudo npm install --global gulp-cli
         gulp minify
 
     - name: Merge and Push
