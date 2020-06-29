@@ -69,7 +69,7 @@
     $.fn.formAppendMessages = function (messages, { classMessage, styleMessage }) {
         const _form = $(this);
 
-        _form.find("small").remove();
+        _form.find("small.sm-message").remove();
 
         $.each(messages, function (target, value) {
             $.each(value, function (name, message) {
@@ -78,7 +78,7 @@
                     .after(
                         `<small 
                             style="${styleMessage instanceof Array ? styleMessage.join(";") : (styleMessage || "")}"
-                            class="${classMessage instanceof Array ? classMessage.join(" ") : (classMessage || "")}">
+                            class="sm-message ${classMessage instanceof Array ? classMessage.join(" ") : (classMessage || "")}">
                             ${message}
                         </small>`
                     );
