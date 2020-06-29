@@ -25,17 +25,19 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install gulp
-      run: npm install --global gulp-cli
+      run: sudo npm install --global gulp-cli
     
     - name: Install dependencies
       run: npm install
      
+    - name: Checkout to gh-pages
+      run: git checkout gh-pages
+
     - name: Run gulp minify
       run: gulp minify
-     
-    - name: Merge to gh-pages
+
+    - name: Merge and Push
       run: |
-        git checkout gh-pages
         git merge master
         git push
         
