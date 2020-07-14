@@ -90,6 +90,13 @@
         return _form;
     }
 
+    /**
+     * Reset the form elements
+     * 
+     * @author Ailton Loures <ailton.loures99@gmail.com>
+     * 
+     * @returns {void}
+     */
     $.fn.formReset = function () {
         const _form = $(this);
 
