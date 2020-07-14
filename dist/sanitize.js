@@ -94,7 +94,7 @@
         const _form = $(this);
 
         _form.each(function() {
-            $(this).reset();
+            this.reset();
         });
     }
 
