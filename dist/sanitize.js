@@ -100,15 +100,11 @@
     $.fn.formReset = function () {
         const _form = $(this);
 
-        // _form.find("small.sm-message").remove();
-
-        // _form
-        //     .find("[name]:not([type='hidden'])")
-        //     .each(function() {
-        //         $(this).val("");
-        //     });
-    
-        _form[0].reset();
+        _form
+            .find("[name]:not([type='hidden'])")
+            .each(function() {
+                $(this).val("");
+            });
     }
 
     /**
