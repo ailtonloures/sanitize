@@ -66,7 +66,7 @@
      * @param {Object} strings { classMessage : Array|String , styleMessage : Array|String } 
      * @returns {HTMLFormElement}
      */
-    $.fn.formAppendMessages = function (messages, { classMessage, styleMessage }) {
+    $.fn.formAppendMessages = function (messages, { classMessage, styleMessage }, inputClass = []) {
         const _form = $(this);
 
         _form.find("small.sm-message").remove();
@@ -75,6 +75,7 @@
             $.each(value, function (name, message) {
                 _form
                     .find(`[name="${target}"]`)
+                    .addClass(...inputClass)
                     .after(
                         `<small 
                             style="${styleMessage instanceof Array ? styleMessage.join(";") : (styleMessage || "")}"
