@@ -90,5 +90,13 @@
         return _form;
     }
 
+    $.fn.formReset = function () {
+        const _form = $(this);
+
+        _form.each(function() {
+            $(this).reset();
+        });
+    }
+
 })(jQuery);
 
