@@ -91,6 +91,19 @@
     }
 
     /**
+     * Clear messages of validations
+     * 
+     * @author Ailton Loures <ailton.loures99@gmail.com>
+     * 
+     * @returns {void}
+     */
+    $.fn.classMessages = function () {
+        const _form = $(this);
+
+        _form.find("small.sm-message").remove();
+    }
+
+    /**
      * Reset the form elements
      * 
      * @author Ailton Loures <ailton.loures99@gmail.com>
@@ -102,7 +115,7 @@
 
         _form
             .find("[name]:not([type='hidden'])")
-            .each(function() {
+            .each(function () {
                 $(this).val("");
             });
     }
@@ -115,12 +128,12 @@
      * @param {String|Array} className The name of class or classes
      * @returns {void}
      */
-    $.fn.removeExceptClass = function(className) {
+    $.fn.removeExceptClass = function (className) {
         const element = $(this);
         const elementClass = element.attr("class").split(" ");
 
-        const classToRemove = elementClass.filter(function(classValue) {
-            if (className instanceof Array) 
+        const classToRemove = elementClass.filter(function (classValue) {
+            if (className instanceof Array)
                 return !className.includes(classValue);
 
             return className !== classValue
