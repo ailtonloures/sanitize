@@ -97,7 +97,7 @@
      * 
      * @returns {void}
      */
-    $.fn.classMessages = function () {
+    $.fn.clearMessages = function () {
         const _form = $(this);
 
         _form.find("small.sm-message").remove();
