@@ -70,6 +70,7 @@
         const _form = $(this);
 
         _form.find("small.sm-message").remove();
+        _form.find("[name]").removeClass(...inputClass);
 
         $.each(messages, function (target, value) {
             $.each(value, function (name, message) {
