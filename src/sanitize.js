@@ -93,9 +93,11 @@
     $.fn.formReset = function () {
         const _form = $(this);
 
-        _form.each(function() {
-            this.reset();
-        });
+        _form
+            .find("[name]:not([type='hidden'])")
+            .each(function() {
+                $(this).val();
+            });
     }
 
 })(jQuery);
