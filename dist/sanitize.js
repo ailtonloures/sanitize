@@ -100,11 +100,37 @@
     $.fn.formReset = function () {
         const _form = $(this);
 
-        _form
-            .find("[name]:not([type='hidden'])")
-            .each(function() {
-                $(this).val("");
-            });
+        // _form.find("small.sm-message").remove();
+
+        // _form
+        //     .find("[name]:not([type='hidden'])")
+        //     .each(function() {
+        //         $(this).val("");
+        //     });
+    
+        _form[0].reset();
+    }
+
+    /**
+     * Remove the excepts class on element
+     * 
+     * @author Ailton Loures <ailton.loures99@gmail.com>
+     * 
+     * @param {String|Array} className The name of class or classes
+     * @returns {void}
+     */
+    $.fn.removeExceptClass = function(className) {
+        const element = $(this);
+        const elementClass = element.attr("class").split(" ");
+
+        const classToRemove = elementClass.filter(function(classValue) {
+            if (className instanceof Array) 
+                return !className.includes(classValue);
+
+            return className !== classValue
+        });
+
+        element.removeClass(classToRemove);
     }
 
 })(jQuery);
