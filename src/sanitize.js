@@ -96,7 +96,7 @@
         _form
             .find("[name]:not([type='hidden'])")
             .each(function() {
-                $(this).val();
+                $(this).val("");
             });
     }
 
