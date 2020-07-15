@@ -142,5 +142,19 @@
         element.removeClass(classToRemove);
     }
 
+    /**
+     * Remove all class on the element
+     * 
+     * @author Ailton Loures <ailton.loures99@gmail.com>
+     * 
+     * @returns {void}
+     */
+    $.fn.removeAllClass = function () {
+        const element = $(this);
+        const elementClass = element.attr("class").split(" ");
+
+        element.removeClass(elementClass);
+    }
+
 })(jQuery);
 
